@@ -1,4 +1,4 @@
-body {
+/* body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
@@ -10,4 +10,92 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+} */
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    'header'
+    'main'
+    'footer';
+  grid-template-columns: 1fr;
+  grid-template-rows: 5rem 1fr 5rem;
+  height: 100%;
+}
+.header {
+  /* overflow: hidden; */
+  /* background-color:white;
+  opacity: 0.5; */
+  /* filter: blur(1px); */
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px); 
+  
+  width:100%;
+  position:absolute;
+  top:0;
+  left: 0;
+  background:rgba(164, 191, 216, 0.5);
+  grid-area: header;
+ 
+  color: #ffffff;
+  /* display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem; */
+  
+  z-index:1000;
+} 
+ .header-links{
+  float: left;
+  color:rgb(0, 0, 0);
+  text-align: center;
+  padding: 20px 20px;
+  text-decoration: none;
+  font-size: 20px;
+  font-family: Dosis;
+  
+ 
+  
+} 
+.main{
+  grid-area: main;
+}
+.Home{
+  text-align: left;
+  word-spacing: 10px;
+  text-decoration: none;
+  /* color: white; */
+}
+
+
+.About{
+
+  text-align: left;
+  word-spacing: 10px;
+  text-decoration: none;
+}
+
+.Information{
+
+  text-align: left;
+  word-spacing: 10px;
+  text-decoration: none;
+}
+
+.Certificate{
+  text-align: left;
+  word-spacing: 10px;
+  text-decoration: none;
+
+}
+
+
+
+
+/* .topnav a:hover{
+  background-color:#e4abed;
+} */
+.footer{
+  grid-area: footer;
+  justify-content: center;
+  align-items: center;
 }
